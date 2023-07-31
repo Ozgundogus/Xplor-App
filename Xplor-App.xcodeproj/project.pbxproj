@@ -13,6 +13,8 @@
 		0C0180AA2A76C13F00F0D603 /* Xplor_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0C0180A82A76C13F00F0D603 /* Xplor_App.xcdatamodeld */; };
 		0C0180AC2A76C14000F0D603 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C0180AB2A76C14000F0D603 /* Assets.xcassets */; };
 		0C0180AF2A76C14000F0D603 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C0180AD2A76C14000F0D603 /* LaunchScreen.storyboard */; };
+		0CB035132A76D7CA006C2EAC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0CB035122A76D7CA006C2EAC /* GoogleService-Info.plist */; };
+		D67CD4B4BE6A8B0C36C32A47 /* Pods_Xplor_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DBCE735651B2B2D6AEDE4BA /* Pods_Xplor_App.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,10 @@
 		0C0180AB2A76C14000F0D603 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C0180AE2A76C14000F0D603 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C0180B02A76C14000F0D603 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0CB035122A76D7CA006C2EAC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7DBCE735651B2B2D6AEDE4BA /* Pods_Xplor_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Xplor_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0246E393D02E08207EECC6B /* Pods-Xplor-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xplor-App.release.xcconfig"; path = "Target Support Files/Pods-Xplor-App/Pods-Xplor-App.release.xcconfig"; sourceTree = "<group>"; };
+		B9B1D9B9E867E59F6B61A9A4 /* Pods-Xplor-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xplor-App.debug.xcconfig"; path = "Target Support Files/Pods-Xplor-App/Pods-Xplor-App.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D67CD4B4BE6A8B0C36C32A47 /* Pods_Xplor_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +49,8 @@
 			children = (
 				0C01809E2A76C13F00F0D603 /* Xplor-App */,
 				0C01809D2A76C13F00F0D603 /* Products */,
+				7F2A5E27A37D5DB4C89AB712 /* Pods */,
+				21432EADC26EEC91954C369D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +65,7 @@
 		0C01809E2A76C13F00F0D603 /* Xplor-App */ = {
 			isa = PBXGroup;
 			children = (
+				0CB035122A76D7CA006C2EAC /* GoogleService-Info.plist */,
 				0C01809F2A76C13F00F0D603 /* AppDelegate.swift */,
 				0C0180A12A76C13F00F0D603 /* SceneDelegate.swift */,
 				0C0180A32A76C13F00F0D603 /* ViewController.swift */,
@@ -67,6 +77,23 @@
 			path = "Xplor-App";
 			sourceTree = "<group>";
 		};
+		21432EADC26EEC91954C369D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7DBCE735651B2B2D6AEDE4BA /* Pods_Xplor_App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7F2A5E27A37D5DB4C89AB712 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B9B1D9B9E867E59F6B61A9A4 /* Pods-Xplor-App.debug.xcconfig */,
+				B0246E393D02E08207EECC6B /* Pods-Xplor-App.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0C0180B32A76C14000F0D603 /* Build configuration list for PBXNativeTarget "Xplor-App" */;
 			buildPhases = (
+				182307C4FA5877FBC9724828 /* [CP] Check Pods Manifest.lock */,
 				0C0180982A76C13F00F0D603 /* Sources */,
 				0C0180992A76C13F00F0D603 /* Frameworks */,
 				0C01809A2A76C13F00F0D603 /* Resources */,
+				0BBB931D1CB19D08D9EEF4E7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,10 +156,53 @@
 			files = (
 				0C0180AF2A76C14000F0D603 /* LaunchScreen.storyboard in Resources */,
 				0C0180AC2A76C14000F0D603 /* Assets.xcassets in Resources */,
+				0CB035132A76D7CA006C2EAC /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0BBB931D1CB19D08D9EEF4E7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Xplor-App/Pods-Xplor-App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Xplor-App/Pods-Xplor-App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Xplor-App/Pods-Xplor-App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		182307C4FA5877FBC9724828 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Xplor-App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0C0180982A76C13F00F0D603 /* Sources */ = {
@@ -208,7 +280,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -262,7 +334,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -274,6 +346,7 @@
 		};
 		0C0180B42A76C14000F0D603 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9B1D9B9E867E59F6B61A9A4 /* Pods-Xplor-App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -283,9 +356,10 @@
 				INFOPLIST_FILE = "Xplor-App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -301,6 +375,7 @@
 		};
 		0C0180B52A76C14000F0D603 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0246E393D02E08207EECC6B /* Pods-Xplor-App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,9 +385,10 @@
 				INFOPLIST_FILE = "Xplor-App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
