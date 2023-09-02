@@ -13,6 +13,9 @@
 		0C0180AA2A76C13F00F0D603 /* Xplor_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0C0180A82A76C13F00F0D603 /* Xplor_App.xcdatamodeld */; };
 		0C0180AC2A76C14000F0D603 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C0180AB2A76C14000F0D603 /* Assets.xcassets */; };
 		0C0180AF2A76C14000F0D603 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C0180AD2A76C14000F0D603 /* LaunchScreen.storyboard */; };
+		0C28D9982A94B485008B2B76 /* PrimaryTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C28D9972A94B485008B2B76 /* PrimaryTabViewController.swift */; };
+		0C28D99A2A94D3B4008B2B76 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C28D9992A94D3B4008B2B76 /* HomeViewController.swift */; };
+		0C28D99C2A94D3BF008B2B76 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C28D99B2A94D3BF008B2B76 /* FavoritesViewController.swift */; };
 		0CB035132A76D7CA006C2EAC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0CB035122A76D7CA006C2EAC /* GoogleService-Info.plist */; };
 		D67CD4B4BE6A8B0C36C32A47 /* Pods_Xplor_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DBCE735651B2B2D6AEDE4BA /* Pods_Xplor_App.framework */; };
 /* End PBXBuildFile section */
@@ -26,6 +29,9 @@
 		0C0180AB2A76C14000F0D603 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C0180AE2A76C14000F0D603 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C0180B02A76C14000F0D603 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C28D9972A94B485008B2B76 /* PrimaryTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryTabViewController.swift; sourceTree = "<group>"; };
+		0C28D9992A94D3B4008B2B76 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		0C28D99B2A94D3BF008B2B76 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		0CB035122A76D7CA006C2EAC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7DBCE735651B2B2D6AEDE4BA /* Pods_Xplor_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Xplor_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0246E393D02E08207EECC6B /* Pods-Xplor-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xplor-App.release.xcconfig"; path = "Target Support Files/Pods-Xplor-App/Pods-Xplor-App.release.xcconfig"; sourceTree = "<group>"; };
@@ -65,6 +71,8 @@
 		0C01809E2A76C13F00F0D603 /* Xplor-App */ = {
 			isa = PBXGroup;
 			children = (
+				0C28D99E2A94DD06008B2B76 /* Favorites */,
+				0C28D99D2A94DD00008B2B76 /* Home */,
 				0CB035122A76D7CA006C2EAC /* GoogleService-Info.plist */,
 				0C01809F2A76C13F00F0D603 /* AppDelegate.swift */,
 				0C0180A12A76C13F00F0D603 /* SceneDelegate.swift */,
@@ -73,8 +81,25 @@
 				0C0180AD2A76C14000F0D603 /* LaunchScreen.storyboard */,
 				0C0180B02A76C14000F0D603 /* Info.plist */,
 				0C0180A82A76C13F00F0D603 /* Xplor_App.xcdatamodeld */,
+				0C28D9972A94B485008B2B76 /* PrimaryTabViewController.swift */,
 			);
 			path = "Xplor-App";
+			sourceTree = "<group>";
+		};
+		0C28D99D2A94DD00008B2B76 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0C28D9992A94D3B4008B2B76 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		0C28D99E2A94DD06008B2B76 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				0C28D99B2A94D3BF008B2B76 /* FavoritesViewController.swift */,
+			);
+			path = Favorites;
 			sourceTree = "<group>";
 		};
 		21432EADC26EEC91954C369D /* Frameworks */ = {
@@ -211,8 +236,11 @@
 			files = (
 				0C0180A42A76C13F00F0D603 /* ViewController.swift in Sources */,
 				0C0180A02A76C13F00F0D603 /* AppDelegate.swift in Sources */,
+				0C28D99C2A94D3BF008B2B76 /* FavoritesViewController.swift in Sources */,
 				0C0180A22A76C13F00F0D603 /* SceneDelegate.swift in Sources */,
 				0C0180AA2A76C13F00F0D603 /* Xplor_App.xcdatamodeld in Sources */,
+				0C28D9982A94B485008B2B76 /* PrimaryTabViewController.swift in Sources */,
+				0C28D99A2A94D3B4008B2B76 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
