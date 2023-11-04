@@ -17,6 +17,7 @@
 		0C28D99A2A94D3B4008B2B76 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C28D9992A94D3B4008B2B76 /* HomeViewController.swift */; };
 		0C28D99C2A94D3BF008B2B76 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C28D99B2A94D3BF008B2B76 /* FavoritesViewController.swift */; };
 		0CB035132A76D7CA006C2EAC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0CB035122A76D7CA006C2EAC /* GoogleService-Info.plist */; };
+		0CD494832AA3D02C00991EDF /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD494822AA3D02C00991EDF /* CategoryView.swift */; };
 		D67CD4B4BE6A8B0C36C32A47 /* Pods_Xplor_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DBCE735651B2B2D6AEDE4BA /* Pods_Xplor_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		0C28D9992A94D3B4008B2B76 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0C28D99B2A94D3BF008B2B76 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		0CB035122A76D7CA006C2EAC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0CD494822AA3D02C00991EDF /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		7DBCE735651B2B2D6AEDE4BA /* Pods_Xplor_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Xplor_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0246E393D02E08207EECC6B /* Pods-Xplor-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xplor-App.release.xcconfig"; path = "Target Support Files/Pods-Xplor-App/Pods-Xplor-App.release.xcconfig"; sourceTree = "<group>"; };
 		B9B1D9B9E867E59F6B61A9A4 /* Pods-Xplor-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xplor-App.debug.xcconfig"; path = "Target Support Files/Pods-Xplor-App/Pods-Xplor-App.debug.xcconfig"; sourceTree = "<group>"; };
@@ -71,8 +73,8 @@
 		0C01809E2A76C13F00F0D603 /* Xplor-App */ = {
 			isa = PBXGroup;
 			children = (
-				0C28D99E2A94DD06008B2B76 /* Favorites */,
 				0C28D99D2A94DD00008B2B76 /* Home */,
+				0C28D99E2A94DD06008B2B76 /* Favorites */,
 				0CB035122A76D7CA006C2EAC /* GoogleService-Info.plist */,
 				0C01809F2A76C13F00F0D603 /* AppDelegate.swift */,
 				0C0180A12A76C13F00F0D603 /* SceneDelegate.swift */,
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				0C28D9992A94D3B4008B2B76 /* HomeViewController.swift */,
+				0CD494822AA3D02C00991EDF /* CategoryView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -149,7 +152,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					0C01809B2A76C13F00F0D603 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -240,6 +243,7 @@
 				0C0180A22A76C13F00F0D603 /* SceneDelegate.swift in Sources */,
 				0C0180AA2A76C13F00F0D603 /* Xplor_App.xcdatamodeld in Sources */,
 				0C28D9982A94B485008B2B76 /* PrimaryTabViewController.swift in Sources */,
+				0CD494832AA3D02C00991EDF /* CategoryView.swift in Sources */,
 				0C28D99A2A94D3B4008B2B76 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,6 +298,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -354,6 +359,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

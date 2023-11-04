@@ -9,7 +9,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
-    let placeImageView : UIImageView = {
+    lazy var placeImageView : UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.contentMode = .scaleAspectFill
@@ -17,6 +17,9 @@ class HomeViewController: UIViewController {
         image.layer.cornerRadius = 10
         image.image = UIImage(named: "photo4")
         image.backgroundColor = .systemGray6
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(didtapImage))
+        image.isUserInteractionEnabled = true
+        image.addGestureRecognizer(gesture)
         return image
     }()
     
@@ -44,13 +47,29 @@ class HomeViewController: UIViewController {
         button.setTitleColor(.white, for: .normal)
         button.addTarget(self, action: #selector(didTapShuffle), for: .touchUpInside)
         button.layer.cornerRadius = 10
+        
         return button
     }()
+    
+    lazy var distanceFromPlaceLabel : UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Distance"
+        label.textAlignment = .center
+        label.font = .systemFont(ofSize: 16, weight: .regular)
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(didtapDistanceLabel))
+        label.isUserInteractionEnabled = true
+        label.addGestureRecognizer(gesture)
+        return label
+        
+    }()
+    
+    let categoryView = CategoryView ()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         view.backgroundColor = .systemBackground
         
         configureUI()
@@ -60,7 +79,10 @@ class HomeViewController: UIViewController {
     private func configureUI (){
         view.addSubview(placeImageView)
         view.addSubview(placeNameLabel)
+        view.addSubview(categoryView)
         view.addSubview(shuffleButton)
+        view.addSubview(distanceFromPlaceLabel)
+        
         
         NSLayoutConstraint.activate([
             placeImageView.topAnchor.constraint(equalTo: view.topAnchor , constant: 100),
@@ -73,11 +95,25 @@ class HomeViewController: UIViewController {
             placeNameLabel.widthAnchor.constraint(equalToConstant: 200),
             placeNameLabel.heightAnchor.constraint(equalToConstant: 48),
             
-            shuffleButton.topAnchor.constraint(equalTo: placeNameLabel.bottomAnchor , constant: 24),
+            
+            categoryView.topAnchor.constraint(equalTo: placeNameLabel.bottomAnchor , constant: 24),
+            categoryView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            categoryView.widthAnchor.constraint(equalToConstant: 200),
+            categoryView.heightAnchor.constraint(equalToConstant: 48),
+            
+            distanceFromPlaceLabel.topAnchor.constraint(equalTo: categoryView.bottomAnchor , constant: 24),
+            distanceFromPlaceLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            distanceFromPlaceLabel.widthAnchor.constraint(equalToConstant: 200),
+            distanceFromPlaceLabel.heightAnchor.constraint(equalToConstant: 24),
+            
+            
+            shuffleButton.topAnchor.constraint(equalTo: distanceFromPlaceLabel.bottomAnchor , constant: 24),
             shuffleButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             shuffleButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 32),
             shuffleButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -32),
             shuffleButton.heightAnchor.constraint(equalToConstant: 48),
+          
+            
         ])
         
         
@@ -86,6 +122,18 @@ class HomeViewController: UIViewController {
     @objc func didTapShuffle () {
         print("shuffle shuffle")
     }
+
+
+ @objc func didtapImage () {
+        print("image image")
+    }
+
+ @objc func didtapDistanceLabel () {
+        print("distance distance")
+    }
+
+
+
 
   
 }
