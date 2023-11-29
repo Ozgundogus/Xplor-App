@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class HomeViewController: UIViewController {
 
@@ -64,8 +65,21 @@ class HomeViewController: UIViewController {
         
     }()
     
-    let categoryView = CategoryView ()
     
+    let categoryView = CategoryView()
+    var places = [PlaceModel]()
+    var currentPlaces : PlaceModel?
+    
+    let databaseService : DatabaseServiceProtocol?
+    
+    init(databaseService: DatabaseServiceProtocol?) {
+        self.databaseService = databaseService
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,6 +87,7 @@ class HomeViewController: UIViewController {
         view.backgroundColor = .systemBackground
         
         configureUI()
+        fetchPlaces()
         
     }
     
@@ -120,7 +135,11 @@ class HomeViewController: UIViewController {
     }
     
     @objc func didTapShuffle () {
-        print("shuffle shuffle")
+        if !places.isEmpty {
+            self.currentPlaces = places.randomElement()
+            guard let currentPlaces = currentPlaces else { return }
+            updateCurrentPlaceFor(currentPlaces: currentPlaces)
+        }
     }
 
 
@@ -132,8 +151,32 @@ class HomeViewController: UIViewController {
         print("distance distance")
     }
 
-
-
-
-  
+    private func fetchPlaces () {
+        
+     
+        databaseService?.fetchPlaces { [weak self] result in
+            guard let strongSelf = self else { return }
+            switch result {
+            case .success(let success):
+                strongSelf.places = success
+            case .failure(let failure):
+                print("error")
+                print(failure.localizedDescription)
+            }
+        }
+    }
+    
+    private func updateCurrentPlaceFor (currentPlaces: PlaceModel) {
+        placeNameLabel.text = currentPlaces.name
+        
+        // Image
+        let urlString = currentPlaces.imageURL
+        let url = URL(string: urlString)
+        placeImageView.sd_setImage(with: url)
+        
+        // Category
+        categoryView.setCategory(category: currentPlaces.category)
+        // Distance
+    }
 }
+

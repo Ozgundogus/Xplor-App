@@ -10,15 +10,17 @@ import UIKit
 //Some if there is a user signed in
 class PrimaryTabViewController: UITabBarController {
 
+    let databaseService = DatabaseService()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
             configureTabBars()
-        
+         
     }
     
     private func configureTabBars() {
-        let vc1 = HomeViewController()
+        let vc1 = HomeViewController(databaseService: databaseService)
         let vc2 = FavoritesViewController()
         
         
